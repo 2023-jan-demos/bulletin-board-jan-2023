@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- title and favicon -->
+    <title>Web App</title>
+    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"></script>
+
+    <!-- js -->
+    <script type="module" src="auth.js"></script>
+
+    <!-- fonts -->
+    <!-- see https://fonts.google.com/ -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <!-- add link for page specific css -->
+
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../assets/html_css_js.png" alt="logo">
+        <h1>Auth page</h1>
+    </header>
+
+    <main>
+        <form class="sign-up">
+            <h3>Sign up</h3>
+            <label>
+                Email
+                <input type="email" name="email" />
+            </label>
+            <label>
+                Password
+                <input type="password" name="password" />
+            </label>
+            <button>Sign Up</button>
+        </form>
+        <form class="sign-in">
+            <h3>Sign In</h3>
+            <label>
+                Email
+                <!-- our inputs need a name so we can grab thewm with data.get('email') in our javascript, justl ike URLSearchParams -->
+                <input name="email" />
+            </label>
+            <label>
+                Password
+                <input name="password" />
+            </label>
+            <button>Sign In</button>
+        </form>
+    </main>
+
+</body>
+
+</html>
